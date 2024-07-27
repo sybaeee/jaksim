@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>버튼 디자인</title>
+  <style>
+    button{
+      z-index: 10;
+      background-color: #e8e8e8;
+      border: none;
+      font-size: 17px;
+      transition: 0.3s;
+
+      border-radius: 10px; 
+      padding: 10px 10px;
+      
+      box-shadow: 0 5px black;
+    }
+    /* 가상클래스 hover , 마우스가 올라갔을 때 적용시킬 디자인 */
+    button:hover{
+      background-color: red;
+      transform: translateY(-5px);
+      box-shadow: 0 10px black;
+    }
+    /* 가상클래스 active , 마우스가 눌렸을때 적용시킬 디자인 */
+    button:active{
+      background-color: green;
+      transform: translateY(2px);
+      box-shadow: none;
+    }
+    
+  </style>
+</head>
+<body>
+  <button>
+    BUTTON
+  </button>
+</body>
+</html>

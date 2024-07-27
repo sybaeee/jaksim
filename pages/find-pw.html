@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAKSIM-비밀번호 찾기</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+  <div class="auth-background">
+    <form class="auth-container">
+      <div class="auth-head">
+        <a href=""><img class = "logo" src="../assets/logo_black.png" alt="logo"></a>
+        <p class="page-title">Find Password</p>
+      </div>
+      <div class="input-box">
+        <label for="email">이메일</label>
+        <input id="email" type="text" placeholder="email 입력">
+      </div>
+      <div class="input-box">
+        <label for="user-name">닉네임</label>
+        <input id="user-name" type="text" placeholder="닉네임 입력">
+      </div>
+      <div class="input-box">
+        <label for="find-question">본인 확인 질문</label>
+        <select name="" id="find-question">
+          <option value="1">내가 태어난 곳은?</option>
+          <option value="2">내가 처음 키운 반려동물 이름은?</option>
+          <option value="3">가장 좋아하는 책은?</option>
+        </select>
+        <input id="find-answer" type="text" placeholder="응답 입력">
+      </div>
+      <div class="input-box">
+        <label for="password">새로 사용할 비밀번호</label>
+        <input id="password" type="password" placeholder="새 비밀번호 입력">
+        <p class="status-msg err">8글자 이상으로 설정해 주세요.</p>
+        <input type="password" id="password-check" placeholder="비밀번호 확인">
+        <p class="status-msg err">비밀번호가 일치하지 않습니다.</p>
+      </div>
+      <button>비밀번호 변경!</button>
+      <div class="auth-foot">
+        <a href="./sign-in.html">회원가입</a>
+        <div class="vertical-line"></div>
+        <a href="./log-in.html">로그인</a>
+        <div class="vertical-line"></div>
+        <a href="./find-id.html">ID 찾기</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
