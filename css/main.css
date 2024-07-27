@@ -13,6 +13,7 @@ header{
   left: 0;
   right: 0;
   backdrop-filter: blur(5px);
+  z-index: 20;
 }
 
 .main-logo{
@@ -26,6 +27,8 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 10;
 }
 .banner-img{
   width: 50%;
@@ -40,8 +43,16 @@ header{
   animation-direction: alternate;
 }
 
+.banner-content{
+  position: absolute;
+  bottom: 30%;
+}
+
 .category-container{
   transform: skewY(-5deg);
+  position: absolute;
+  bottom: 50%;
+  z-index: 20;
 }
 
 .category-container label{
@@ -73,6 +84,9 @@ header{
   outline: none;
   font-weight: bold;
   transform: skewY(-5deg);
+  position: absolute;
+  bottom: 30%;
+  z-index: 10;
 }
 
 
