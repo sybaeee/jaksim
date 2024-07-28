@@ -46,13 +46,18 @@ header{
 .banner-content{
   position: absolute;
   bottom: 30%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 900px;
+  min-width: 400px;
 }
 
 .category-container{
   transform: skewY(-5deg);
-  position: absolute;
-  bottom: 50%;
-  z-index: 20;
+  position: relative;
+  margin-bottom: -10px;
+  z-index: 1;
 }
 
 .category-container label{
@@ -84,11 +89,140 @@ header{
   outline: none;
   font-weight: bold;
   transform: skewY(-5deg);
-  position: absolute;
-  bottom: 30%;
-  z-index: 10;
+  position: relative;
+}
+/* search banner 디자인 끝 */
+
+main{
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
 }
 
+.meeting-container{
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.pagination{
+  margin: 0 auto;
+}
+
+.active{
+  background-color: #6cd5e9;
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+/* card 디자인시작 */
+.card{
+  border: 3px solid black;
+  box-shadow: 5px 5px black;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.card-header{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.meeting-leader-profile{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.card-title{
+  flex-grow: 1;
+  font-size: 18px;
+}
+
+.card-cover{
+  width: 100%;
+  border-radius: 7px;
+}
+
+.card-body{
+  font-size: 16px;
+  line-height: 200%;
+}
+
+.weekday , .mission{
+  background-color: #2d2d2d;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.mon{color:#dcecaa }
+.tue{color: #3bff8d}
+.wed{color: #ffa845}
+.thu{color: #ff6b6b}
+.fri{color: #93a6ff}
+.sat{color: #aafff1}
+.sun{color: #cfb5ff}
+
+.mission{
+  color: #ff26db;
+}
+
+.card-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category{
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #6cd5e9;
+
+}
+
+.participants{
+  display: flex;
+}
+
+.profile{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid silver;
+  margin-left: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+
+
+/* card 디자인끝 */
+
+/* footer 디자인 시작 */
+footer{
+  background-color: #333333;
+  color: white;
+  padding: 20px 10px;
+  
+}
+
+.footer-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-logo{
+  width: 150px;
+}
+
+/* footer 디자인 끝 */
 
 @keyframes fly{
   0%{
@@ -99,17 +233,32 @@ header{
   }
 }
 
-/* search banner 디자인 끝 */
+
 
 /* 태블릿 기준 디자인 */
 @media screen and (min-width:600px) {
-  
+  .meeting-container{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width:900px) {
+  .meeting-container{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /* 웹 기준 디자인 */
 @media screen and (min-width:1024px) {
   header{
     padding: 5px 100px;
+  }
+  footer{
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+  .meeting-container{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
