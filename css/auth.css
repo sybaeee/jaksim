@@ -75,7 +75,13 @@
 .status-msg{
   font-size: 14px;
   padding-left: 10px;
+  display: none;
 }
+
+.status-msg.active{
+  display: block;
+}
+
 
 .social-login{
   border-top: 1px solid silver;
