@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAKSIM-모임 만들기</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/create-meeting.css">
+  
+</head>
+<body>
+  <header>
+    <a href="">
+      <img class="main-logo" src="../assets/logo_black.png" alt="logo">
+    </a>
+    <div class="auth-box">
+      <button class="effect-button">LOGIN</button>
+      <button class="effect-button">JOIN</button>
+      <button class="effect-button">새로운 모임 만들기</button>
+    </div>
+  </header>
+  <main>
+    <div class="create-meeting-container">
+      <h1>새로운 모임 만들기</h1>
+      <form class="create-meeting-form">
+        <div class="form-group">
+          <label for="meeting-title">모임 제목</label>
+          <input type="text" id="meeting-title" name="meeting-title" required>
+        </div>
+        <div class="form-group">
+          <label>미션 요일</label>
+          <div class="days-checkboxes">
+            <label><input type="checkbox" name="mission-days" value="월요일"> 월요일</label>
+            <label><input type="checkbox" name="mission-days" value="화요일"> 화요일</label>
+            <label><input type="checkbox" name="mission-days" value="수요일"> 수요일</label>
+            <label><input type="checkbox" name="mission-days" value="목요일"> 목요일</label>
+            <label><input type="checkbox" name="mission-days" value="금요일"> 금요일</label>
+            <label><input type="checkbox" name="mission-days" value="토요일"> 토요일</label>
+            <label><input type="checkbox" name="mission-days" value="일요일"> 일요일</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mission">미션</label>
+          <textarea id="mission" name="mission" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="meeting-description">모임 상세 설명</label>
+          <textarea id="meeting-description" name="meeting-description" rows="5" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="meeting-cover">모임 커버 이미지</label>
+          <input type="file" id="meeting-cover" name="meeting-cover" accept="image/*" required>
+        </div>
+        <button type="submit" class="effect-button">모임 생성하기</button>
+      </form>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="footer-content">
+      <a href="">
+        <img src="../assets/logo_gray.png" alt="" class="footer-logo">
+      </a>
+      <div class="footer-copyright">
+        &copy; 2024 JAKSIM. All rights reserved
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

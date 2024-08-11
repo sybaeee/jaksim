@@ -16,9 +16,14 @@
     <div class="auth-box">
       <button class="effect-button">LOGIN</button>
       <button class="effect-button">JOIN</button>
+      <button class="effect-button">새로운 모임 만들기</button>
     </div>
   </header>
   <main>
+    <div class="admin-buttons">
+      <button class="edit-btn">수정</button>
+      <button class="delete-btn">삭제</button>
+    </div>
     <div class="meeting-detail-container">
       <div class="meeting-cover">
         <h2>헬린이를 위한 모임</h2>
@@ -115,9 +120,29 @@
           </section>
         </div>
       </div>
-      <button style="width: 300px; align-self: center;" class="effect-button">
+      <button id="open-popup" style="width: 300px; align-self: center;" class="effect-button">
         미션 완료하기!
       </button>
+    </div>
+    <div id="mission-popup" class="popup">
+      <div class="popup-content">
+        <span id="close-popup" class="close-btn">&times;</span>
+        <div class="popup-header">
+          <h1>미션 인증하기</h1>
+          <p>미션을 완료했으면 아래 정보를 입력해주세요.</p>
+        </div>
+        <form class="verify-form">
+          <div class="form-group">
+            <label for="comment">코멘트:</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="미션에 대한 간단한 코멘트를 작성해 주세요."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="photo">사진 업로드:</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+          </div>
+          <button type="submit" class="submit-btn">미션 인증하기</button>
+        </form>
+      </div>
     </div>
   </main>
   
@@ -131,5 +156,30 @@
       </div>
     </div>
   </footer>
+  <script>
+    // JavaScript to handle the popup display
+
+document.addEventListener('DOMContentLoaded', () => {
+  const openPopupBtn = document.getElementById('open-popup');
+  const popup = document.getElementById('mission-popup');
+  const closePopupBtn = document.getElementById('close-popup');
+
+  openPopupBtn.addEventListener('click', () => {
+    popup.style.display = 'flex'; // 팝업창 보이기
+  });
+
+  closePopupBtn.addEventListener('click', () => {
+    popup.style.display = 'none'; // 팝업창 숨기기
+  });
+
+  // 팝업창 외부 클릭 시 닫기
+  window.addEventListener('click', (event) => {
+    if (event.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
+});
+
+  </script>
 </body>
 </html>
